@@ -56,8 +56,8 @@
           <hr>
           <div class="row">
             <div class="col-lg-6 dark-text">             
-              <img src="{{ project.Author_profile.profile.url }}" alt="" class="rounded-circle img-fluid mr-1" style="width: 40px;">
-              Posted By: {{project.Author |upper}}<small> <span class="mr-1"> From {{project.country.name}}</span>
+              <img src="{{ project_item.Author.profile.photo.url }}" alt="" class="rounded-circle img-fluid mr-1" style="width: 40px;">
+              Posted By: {{project_item.Author.first_name|upper}}<small> <span class="mr-1"> From {{project.country.name}}</span>
               <img src="{{project.country.flag}}" alt=" {{project.country.name}} flag"> </small> </div>
 
             <div class="col-lg-6 dark-text"> <small> Date Posted: {{project.pub_date|date:"d /m/Y"}} </small> </div>
