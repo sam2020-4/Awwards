@@ -20,13 +20,10 @@
 </head>
 
 <body>
-      {% include "navbar.html" %}
-
-    <div class="jumbotron jumbotron-fluid bg-light pb-3 pt-3">
-            
-       <h2 class="display-5 text-center font-weight-bold">SUBMIT YOUR SITE </h2>
+  {% include "navbar.html" %}
+  <br> <br> <br> <br>   
+  <h2 class="display-5 text-center font-weight-bold">SUBMIT YOUR SITE </h2>    
     
-    </div>      
 
   <div class="row">
       <!-- Empty div -->
@@ -37,7 +34,7 @@
               {%csrf_token%}
 
               {% bootstrap_form form%}
-              <input type="submit" class="btn btn-success btn-lg font-weight-bold" value="SUBMIT">
+              <input type="submit" class="btn btn-info btn-lg font-weight-bold" value="SUBMIT">
             </form>
       </div>
 
@@ -52,7 +49,7 @@
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
   {% endblock %}
-
+<br> <br> <br>
 </body>
 
 </html>

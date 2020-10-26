@@ -59,7 +59,7 @@
 
             <div class="col-lg-6 dark-text"> <small> Date Posted: {{project.pub_date|date:"d /m/Y"}} </small> </div>
           </div>
-          <!-- {{ratings_start_userrating}} -->
+          {{ratings_start_userrating}}
         </div>
         <!-- Card content -->
 
@@ -77,7 +77,7 @@
 
           <small class="font-weight-bold ml-2"><img src="{{ project.Author.profile.photo.url }}" alt=""
               class="rounded-circle img-fluid mr-1" style="width: 50px;">
-            BY {{project.Author.first_name|upper}} <span class="ml-1 mr-1"> From {{project.country.name}}</span>
+            BY {{project_Author.first_name |upper}} <span class="ml-1 mr-1"> From {{project.country.name}}</span>
             <img src="{{project.country.flag}}" alt=" {{project.country.name}} flag"></small>
         </div>
 

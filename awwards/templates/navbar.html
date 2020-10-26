@@ -20,9 +20,9 @@
           
         </li>
         {% if user.is_authenticated %}
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link" href="{% url 'index' %}">Add new-project</a>
-          </li>
+          </li> -->
         {% endif %}        
         </ul>
        
@@ -37,9 +37,12 @@
           {% endif %}
           <div class="col-sm-6 col-lg-6 d-flex justify-content-end">
               {% if user.is_authenticated %}
-              <ul><li class="nav-item">
-                  <a class="nav-link btn btn-block text-white success-color-dark" href="{%url 'new-project'%}">SUBMIT YOUR SITE </a>
-                </li></ul>
+              <ul>
+                <li class="nav-item">
+                  <a class="nav-link btn btn-outline-white btn-md my-2 btn-sm text-white success-color-dark" href="{%url 'new-project'%}">SUBMIT YOUR SITE </a>
+                </li>
+              </ul>
+
               <ul>
                 <li class="dropdown list-unstyled text-white">
                     <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
