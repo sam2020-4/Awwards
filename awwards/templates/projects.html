@@ -20,10 +20,9 @@
         <div class="view view-cascade overlay">
           {% if project.project_image %}
           <img class="card-img-top" src="{{project.project_image.url}}" alt="{{ project.project_name }}"
-           style="max-height: 500px;">
+           style="max-height: 350px;">
           {% else %}
-          <img class="card-img-top" src="https://source.unsplash.com/1600x900/?fun,vacation"
-            alt="{{ project.project_name }}">
+          <img class="card-img-top" src="https://source.unsplash.com/1600x900/?fun,vacation" alt="{{ project.project_name }}">
           {% endif %}
           <a href="#!">
             <div class="mask rgba-white-slight">
