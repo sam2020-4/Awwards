@@ -8,12 +8,9 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth.decorators import login_required
 from .forms import *
 from django.contrib import messages
-from rest_framework.response import Response
-from rest_framework.views import APIView
-from .serializer import ProfileSerializer, ProjectSerializer
 
-# Create your views here.form
 
+# Create your views here.
 def index(request):
     date = dt.date.today()
     projects = Projects.get_projects()
