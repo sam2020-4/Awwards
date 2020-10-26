@@ -11,6 +11,12 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
+from decouple import config
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -32,6 +38,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'awwards',
+    'cloudinary',
     'tinymce',
     'django_countries',
     'star_ratings',
@@ -134,3 +141,10 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+cloudinary.config( 
+  cloud_name = config('Cloud_name'), 
+  api_key = config('API_Key'),
+  api_secret = config('API_Secret')
+)

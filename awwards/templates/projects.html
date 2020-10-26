@@ -4,7 +4,8 @@
 {% load ratings %}
 
 {% block content %}
-<div class="container">
+
+<div class="container" style="padding-top: 70px;">
   <div class="row mt-4"></div>
   <!-- Grid row -->
   <div class="row">
@@ -50,6 +51,7 @@
           <div class="mt-2 pt-2">
             <h4>Vote</h4>
           </div>
+
           {% ratings project %}
 
 
@@ -59,7 +61,7 @@
 
             <div class="col-lg-6 dark-text"> <small> Date Posted: {{project.pub_date|date:"d /m/Y"}} </small> </div>
           </div>
-          {{ratings_start_userrating}}
+          <!-- {{ratings_start_userrating}} -->
         </div>
         <!-- Card content -->
 
