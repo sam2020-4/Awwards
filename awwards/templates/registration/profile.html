@@ -7,9 +7,9 @@
 <br> <br> <br> <br>
 <div class="container mb-4" style="padding-top: 50px;">  
   <div class="row">
-    <div claiss="col-md-3 p-2">
-      {% if user.profile.photo %}
-      <img src="{{ user.profile.photo.url }}" alt="" class="d-flex justify-content-start rounded-circle mb-1 img-fluid mr-1" style="width: 75px;height: 75px;">
+    <div claiss="col-lg-12 p-2">
+      {% if user.photo %}
+      <img src="{{ user.photo.url }}" alt="" class="d-flex justify-content-start rounded-circle mb-1 img-fluid mr-1" style="width: 75px;height: 75px;">
       {% else %}
       <img src="https://source.unsplash.com/1600x900/?user,profile" alt="" class="d-flex justify-content-start rounded-circle mb-1 img-fluid mr-1" style="width: 75px;height: 75px;">
         {% endif %}
@@ -19,10 +19,10 @@
       <button class="btn btn-md btn-outline-info font-weight-bold" data-toggle="modal" data-target="#profile"> Edit Profile</button>
     </div>
 
-    <div claiss="col-md-3 p-2"></div>
+    <div claiss="col-lg-12 p-2"></div>
 
     <!-- project column -->
-    <dv claiss="col-md-9 p-3">
+    <dv claiss="col-lg-12 p-3">
       <hr>
       <h4 class="font-weight-bold">My Projects</h4>
       <hr>
@@ -68,7 +68,6 @@
 
               </form>
           </div>
-
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-info btn-md" data-dismiss="modal">Close</button>

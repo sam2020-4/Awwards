@@ -82,7 +82,7 @@ def user_profiles(request):
     projects = Projects.get_by_author(Author)
     
     if request.method == 'POST':
-        form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)
+        form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.photo)
         if form.is_valid():
             profile = form.save(commit=False)
             profile.save()

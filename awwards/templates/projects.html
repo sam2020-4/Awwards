@@ -51,13 +51,14 @@
           <div class="mt-2 pt-2">
             <h4>Vote</h4>
           </div>
-          {% ratings project %}
+          <!-- {% ratings project %} -->
 
-          <hr>
+          {% ratings project %}
+                   
           <div class="row">
             <div class="col-lg-6 dark-text">             
-              <img src="{{ project_item.Author.profile.photo.url }}" alt="" class="rounded-circle img-fluid mr-1" style="width: 40px;">
-              Posted By: {{project_item.Author.first_name|upper}}<small> <span class="mr-1"> From {{project.country.name}}</span>
+              <img src="{{ project_item.Author.photo.url }}" alt="" class="rounded-circle img-fluid mr-1" style="width: 40px;">
+              Posted By:{{project_item.Author |upper}}<small>, <span class="mr-1"> From {{project.country.name}}</span>
               <img src="{{project.country.flag}}" alt=" {{project.country.name}} flag"> </small> </div>
 
             <div class="col-lg-6 dark-text"> <small> Date Posted: {{project.pub_date|date:"d /m/Y"}} </small> </div>

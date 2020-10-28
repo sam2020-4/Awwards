@@ -3,9 +3,9 @@
 
 {% block content %}
 
-<div class="">
+<div class="container-fluid" style="padding-top: 60px;">
 
-  <div class="">
+  <div class="" >
     {% if projects %}
     <div class="jumbotron jumbotron-fluid bg-light">
         <div class="">
@@ -55,7 +55,7 @@
                             <div class="row ml-2">
                               <div class="col-lg-6 dark-text"> 
                                 <small class="text-muted ml-2"><img src="{{ project_item.Author.profile.photo.url }}" alt="" class="rounded-circle img-fluid mr-1" style="width: 30px;">
-                                  Posted By: {{project_item.Author.first_name|upper}} </small>
+                                  Posted By: {{project_item.Author |upper}} </small>
                                 <small> <span class="mr-1"> From {{project_item.country.name}}</span> <img src="{{project_item.country.flag}}" alt=" {{project_item.country.name}} flag">  </small> </div>
                               <div class="col-lg-6 dark-text d-flex justify-content-end"> <small> {{project_item.pub_date|date:"d /m/Y"}} </small> </div>
                             </div>
