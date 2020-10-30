@@ -11,7 +11,9 @@ urlpatterns = [
     url(r'^new/project$', views.new_project, name='new-project'),
     url(r'^accounts/profile/$', views.user_profiles, name='profile'),
     url(r'^ratings/', include('star_ratings.urls', namespace='ratings', app_name='ratings')),
-    url(r'^api/merch/$', views.MerchList.as_view()),   
+    # url(r'^api/merch/$', views.MerchList.as_view()),   
+    url(r'^api/projects/$', views.ProjectList.as_view()),
+    url(r'^api/profiles/$', views.ProfileList.as_view()),
 
 ]
 

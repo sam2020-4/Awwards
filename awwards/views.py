@@ -12,8 +12,9 @@ from django.contrib import messages
 # rest-framework
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from .models import  Projects
-from .serializer import MerchSerializer
+# from .models import  Projects
+# from .serializer import MerchSerializer
+from .serializer import ProfileSerializer, ProjectSerializer
 
 # handling post request
 from rest_framework import status
@@ -99,17 +100,21 @@ def user_profiles(request):
 
 
 #rest API 
-class MerchList(APIView):
+# class MerchList(APIView):
+#     def get(self, request, format=None):
+#         all_merch = Projects.objects.all()
+#         serializers = MerchSerializer(all_merch, many=True)
+#         return Response(serializers.data)
+
+
+class ProjectList(APIView):
     def get(self, request, format=None):
-        all_merch = Projects.objects.all()
-        serializers = MerchSerializer(all_merch, many=True)
+        all_project = Projects.objects.all()
+        serializers = ProjectSerializer(all_project, many=True)
         return Response(serializers.data)
-
-    # handling post request
-    def post(self, request, format=None):
-        serializers = MerchSerializer(data=request.data)
-        if serializers.is_valid():
-            serializers.save()
-            return Response(serializers.data, status=status.HTTP_201_CREATED)
-        return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
-
+        
+class ProfileList(APIView):
+    def get(self, request, format=None):
+        all_profile = Profile.objects.all()
+        serializers = ProfileSerializer(all_profile, many=True)
+        return Response(serializers.data)   
