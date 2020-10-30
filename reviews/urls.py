@@ -23,9 +23,11 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.contrib.auth import views
+# from django.contrib.auth import views as auth_views
 from registration.backends.simple.views import RegistrationView
 from awwards.forms import RegisterForm
-
+from awwards import views
+from awwards.views import MerchList
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -37,6 +39,8 @@ urlpatterns = [
         name='registration_register',
     ),
     url(r'^accounts/', include('registration.backends.simple.urls')),
-    url(r'^logout/$', views.logout, {"next_page": '/'}), 
+    # url(r'^logout/$', views.logout, {"next_page": 'logout'}), 
+    # url('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
     url(r'^tinymce/', include('tinymce.urls')),
+    url('awwards-api/',views.MerchList.as_view(), name='awwards_api'),    
 ]

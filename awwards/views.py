@@ -9,20 +9,18 @@ from django.contrib.auth.decorators import login_required
 from .forms import *
 from django.contrib import messages
 
+# rest-framework
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .models import  Projects
 from .serializer import MerchSerializer
 
-
 # Create your views here.
 def index(request):
     date = dt.date.today()
-    projects = Projects.get_projects()
-    
+    projects = Projects.get_projects()    
 
     return render(request, 'index.html', {"date": date, "projects":projects})
-
 
 def register(request):
     if request.method == 'POST':
@@ -58,11 +56,9 @@ def get_project(request, id):
         project = Projects.objects.get(pk = id)
         
     except ObjectDoesNotExist:
-        raise Http404()
+        raise Http404()    
     
-    
-    return render(request, "projects.html", {"project":project})
-  
+    return render(request, "projects.html", {"project":project})  
 
 @login_required(login_url='/accounts/login/')
 def new_project(request):
@@ -94,9 +90,10 @@ def user_profiles(request):
         return redirect('profile')
         
     else:
-        form = ProfileUpdateForm()
-    
+        form = ProfileUpdateForm()    
     return render(request, 'registration/profile.html', {"form":form, "projects":projects})
+
+
 
 #rest API 
 class MerchList(APIView):
