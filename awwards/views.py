@@ -9,6 +9,11 @@ from django.contrib.auth.decorators import login_required
 from .forms import *
 from django.contrib import messages
 
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from .models import  Projects
+from .serializer import MerchSerializer
+
 
 # Create your views here.
 def index(request):
@@ -92,4 +97,11 @@ def user_profiles(request):
         form = ProfileUpdateForm()
     
     return render(request, 'registration/profile.html', {"form":form, "projects":projects})
+
+#rest API 
+class MerchList(APIView):
+    def get(self, request, format=None):
+        all_merch = Projects.objects.all()
+        serializers = MerchSerializer(all_merch, many=True)
+        return Response(serializers.data)
 

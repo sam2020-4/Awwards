@@ -69,6 +69,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'awwards',
+    'rest_framework',
     'cloudinary',
     'tinymce',
     'django_countries',
