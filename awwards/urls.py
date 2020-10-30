@@ -10,8 +10,8 @@ urlpatterns = [
     url(r'^project/(\d+)', views.get_project, name='project_results'),
     url(r'^new/project$', views.new_project, name='new-project'),
     url(r'^accounts/profile/$', views.user_profiles, name='profile'),
-    # url(r'^ratings/', include('star_ratings.urls', namespace='ratings', app_name='ratings')),
-     url(r'^api/merch/$', views.MerchList.as_view()),   
+    url(r'^ratings/', include('star_ratings.urls', namespace='ratings', app_name='ratings')),
+    url(r'^api/merch/$', views.MerchList.as_view()),   
 
 ]
 

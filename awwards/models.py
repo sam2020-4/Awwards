@@ -2,7 +2,7 @@ from django.db import models
 import datetime as dt
 from django.contrib.auth.models import User
 from tinymce.models import HTMLField
-
+from star_ratings.models import Rating
 from django_countries.fields import CountryField
 from star_ratings.models import Rating
 from cloudinary.models import CloudinaryField

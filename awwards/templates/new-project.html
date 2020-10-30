@@ -14,7 +14,7 @@
 
 {% block styles %} 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="{% static 'css/basenews.css' %}"> 
+<link rel="stylesheet" href="{% static 'css/basereview.css' %}"> 
     <!-- Material Design Bootstrap -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
   {% endblock %}
@@ -44,9 +44,11 @@
 
    {% block scripts %}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
 
   {% bootstrap_javascript %}
   <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
   {% endblock %}
 <br> <br> <br>
