@@ -3,6 +3,8 @@
 ### Description
 ##### This is an application where users can display their projects for others to see, they can also see other people Projects with the languages they have used.
 **** View [Live-Link](https://awwardsprj.herokuapp.com/)
+***** For Developers - [Get_Project_json_here] (https://awwardsprj.herokuapp.com/api/projects/)
+***** For Developers - [Get_Project__profile_json_here] (https://awwardsprj.herokuapp.com/api/profiles/)
 
 ### Author
 matata samuel
